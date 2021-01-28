@@ -16,7 +16,7 @@ class CommentsController extends Controller
             "user_id" => $request->user_id,
             "content" => $request->content,
             "created_at" => $now,
-            "update_at" => $now
+            "updated_at" => $now
         ];
         DB::table('comments')->insert($param);
         return response()->json([
